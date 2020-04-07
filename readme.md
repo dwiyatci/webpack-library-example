@@ -8,4 +8,4 @@ It is trivial code but the aim is to bundle it using webpack.
 ### Features
 
 1. Bundling library code into all library targets ie CommonJS, AMD, ES2015 exports, UMD.
-2. Having `lodash` as an external dependency. 
+2. Having `lodash` as an external dependency.

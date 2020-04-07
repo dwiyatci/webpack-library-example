@@ -6,7 +6,8 @@
   "scripts": {
     "build:browser": "webpack && cp dist/webpack-numbers.js examples/browser",
     "build:node": "webpack && cp dist/webpack-numbers.js examples/node/ && node examples/node/example.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack"
   },
   "keywords": [
     "webpack",
@@ -17,14 +18,14 @@
   "author": "pksjce",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-env": "^1.6.1",
-    "eslint": "^3.9.1",
-    "eslint-loader": "^1.6.1",
-    "lodash": "^4.16.6",
-    "webpack": "^4.4.1",
-    "webpack-cli": "^2.0.12"
+    "@babel/core": "7.9.0",
+    "@babel/preset-env": "7.9.5",
+    "babel-loader": "8.1.0",
+    "babel-plugin-add-module-exports": "1.0.2",
+    "eslint": "6.8.0",
+    "lodash": "4.17.15",
+    "prettier": "2.0.4",
+    "webpack": "4.42.1",
+    "webpack-cli": "3.3.11"
   }
 }
