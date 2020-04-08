@@ -4,6 +4,7 @@
   "description": "An example of how to author libraries using webpack",
   "main": "dist/webpack-numbers.js",
   "scripts": {
+    "babelfoo": "babel foo.js",
     "build:browser": "webpack && cp dist/webpack-numbers.js examples/browser",
     "build:node": "webpack && cp dist/webpack-numbers.js examples/node/ && node examples/node/example.js",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,6 +19,7 @@
   "author": "pksjce",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "7.8.4",
     "@babel/core": "7.9.0",
     "@babel/preset-env": "7.9.5",
     "babel-loader": "8.1.0",

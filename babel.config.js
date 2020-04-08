@@ -14,11 +14,13 @@ module.exports = function (api) {
             'Safari >= 10',
           ],
         },
-        // modules: 'commonjs',
+        modules: 'commonjs',
       },
     ],
   ];
-  const plugins = ['add-module-exports'];
+  const plugins = [
+    // 'add-module-exports'
+  ];
 
   return {
     presets,

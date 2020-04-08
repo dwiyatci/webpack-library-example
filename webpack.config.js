@@ -9,9 +9,10 @@ module.exports = (env, argv) => {
     output: {
       // path: path.resolve(__dirname, './dist'),
       filename: 'webpack-numbers.js',
-      // libraryTarget: 'umd',
+      libraryTarget: 'umd',
+      // libraryTarget: 'commonjs',
+      // libraryTarget: 'commonjs2',
       // globalObject: 'this',
-      libraryTarget: 'commonjs',
       // libraryExport: 'default',
       library: 'webpackNumbers',
     },

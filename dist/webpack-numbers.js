@@ -1,5 +1,14 @@
-exports["webpackNumbers"] =
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["webpackNumbers"] = factory();
+	else
+		root["webpackNumbers"] = factory();
+})(window, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// install a JSONP callback for chunk loading
 /******/ 	function webpackJsonpCallback(data) {
 /******/ 		var chunkIds = data[0];
@@ -160,17 +169,22 @@ exports["webpackNumbers"] =
 /*!******************!*\
   !*** ./index.js ***!
   \******************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _ref_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ref.json */ "./ref.json");
-var _ref_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./ref.json */ "./ref.json", 1);
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _lodash = _interopRequireDefault(__webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js"));
+
+var _ref = _interopRequireDefault(__webpack_require__(/*! ./ref.json */ "./ref.json"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function createTransalator() {
   return {
@@ -185,20 +199,20 @@ function createTransalator() {
 }
 
 var converttoword = function converttoword(num) {
-  return lodash__WEBPACK_IMPORTED_MODULE_0___default.a.reduce(_ref_json__WEBPACK_IMPORTED_MODULE_1__, function (accum, ref) {
+  return _lodash.default.reduce(_ref.default, function (accum, ref) {
     return ref.num === num ? ref.word : accum;
   }, '');
 };
 
 var converttonum = function converttonum(word) {
-  return lodash__WEBPACK_IMPORTED_MODULE_0___default.a.reduce(_ref_json__WEBPACK_IMPORTED_MODULE_1__, function (accum, ref) {
+  return _lodash.default.reduce(_ref.default, function (accum, ref) {
     return ref.word === word && word.toLowerCase() ? ref.num : accum;
   }, -1);
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (createTransalator());
-module.exports = exports["default"];
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
+var _default = createTransalator();
+
+exports.default = _default;
 
 /***/ }),
 
@@ -214,4 +228,5 @@ module.exports = JSON.parse("[{\"num\":1,\"word\":\"One\"},{\"num\":2,\"word\":\
 /***/ })
 
 /******/ });
+});
 //# sourceMappingURL=webpack-numbers.js.map
