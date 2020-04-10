@@ -1,8 +1,11 @@
+require('./boom');
 // require('lodash');
-var webpackNumbers = require('./webpack-numbers.js');
+// var webpackNumbers = require('./webpack-numbers.js');
 // require('../../dist/vendors~main.webpack-numbers');
-// const webpackNumbers = require('../../dist/webpack-numbers');
+require('../../dist/main.webpack-numbers');
+const webpackNumbers = require('../../dist/webpack-numbers');
 
+console.log(global.boom);
 console.log(webpackNumbers);
 
 var out = function () {

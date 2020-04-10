@@ -1,18 +1,18 @@
 <html>
   <head>
     <title>webpack library example - Transalating numbers</title>
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/lodash@4.16.6"
-    ></script>
+    <script type="text/javascript" src="https://unpkg.com/lodash@4.16.6"></script>
   </head>
   <body>
     <div id="root"></div>
     <script type="text/javascript" src="./webpack-numbers.js"></script>
+    <script type="text/javascript" src="./main.webpack-numbers.js"></script>
     <script type="text/javascript">
+      console.log(webpackNumbers);
       document.getElementById('root').innerHTML =
-        " This is a browser example where and api is called to transalate 'One' to '1' \n Results: wordtonum('One') === " +
+        " This is a browser example where and api is called to translate 'One' to '1' \n Results: wordtonum('One') === " +
         webpackNumbers.wordtonum('One');
     </script>
+    <button onclick="webpackNumbers.getTheAnswer()">get the answer</button>
   </body>
 </html>

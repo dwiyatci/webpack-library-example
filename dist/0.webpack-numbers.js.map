@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://webpackNumbers/./node_modules/the-answer/dist/the-answer.es.js"],"names":[],"mappings":";;;;;;;;;;AAAA;AAAA;;AAEe,oEAAK,EAAC","file":"0.webpack-numbers.js","sourcesContent":["var index = 42;\n\nexport default index;\n"],"sourceRoot":""}

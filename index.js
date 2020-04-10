@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import numRef from './ref.json';
 
-function createTransalator() {
+function createTranslator() {
   return {
     numtoword: (num) => {
       return num < 0 || num > 5 ? 'This is a failure' : converttoword(num);
@@ -9,6 +9,10 @@ function createTransalator() {
     wordtonum: (word) => {
       const num = converttonum(word);
       return num === -1 ? 'This is a failure' : num;
+    },
+    async getTheAnswer() {
+      const theAnswer = (await import('the-answer')).default;
+      console.log(theAnswer);
     },
   };
 }
@@ -33,4 +37,4 @@ const converttonum = (word) => {
   );
 };
 
-export default createTransalator();
+export default createTranslator();

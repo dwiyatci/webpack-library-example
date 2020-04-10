@@ -11,8 +11,9 @@ module.exports = (env, argv) => {
       libraryTarget: 'umd',
       // libraryTarget: 'commonjs',
       // libraryTarget: 'commonjs2',
-      globalObject: 'this',
-      // libraryExport: 'default',
+      // globalObject: 'this',
+      // globalObject: 'global',
+      libraryExport: 'default',
       library: 'webpackNumbers',
     },
     // externals: {

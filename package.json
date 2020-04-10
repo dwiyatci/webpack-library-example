@@ -5,8 +5,8 @@
   "main": "dist/webpack-numbers.js",
   "scripts": {
     "babelfoo": "babel foo.js",
-    "build:browser": "webpack && cp dist/webpack-numbers.js examples/browser",
-    "build:node": "webpack && cp dist/webpack-numbers.js examples/node/ && node examples/node/example.js",
+    "build:browser": "webpack && cp dist/{webpack-numbers.js,main.webpack-numbers.js,0.webpack-numbers.js} examples/browser",
+    "build:node": "webpack && cp dist/{webpack-numbers.js,main.webpack-numbers.js,0.webpack-numbers.js} examples/node/ && node examples/node/example.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack"
   },
@@ -18,9 +18,14 @@
   ],
   "author": "pksjce",
   "license": "ISC",
+  "dependencies": {
+    "@babel/runtime-corejs3": "7.9.2",
+    "the-answer": "1.0.0"
+  },
   "devDependencies": {
     "@babel/cli": "7.8.4",
     "@babel/core": "7.9.0",
+    "@babel/plugin-transform-runtime": "7.9.0",
     "@babel/preset-env": "7.9.5",
     "babel-loader": "8.1.0",
     "babel-plugin-add-module-exports": "1.0.2",

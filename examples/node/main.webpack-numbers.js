@@ -1,4 +1,84 @@
-(this["webpackJsonpwebpackNumbers"] = this["webpackJsonpwebpackNumbers"] || []).push([["vendors~main"],{
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["webpackNumbers"] = factory();
+	else
+		root["webpackNumbers"] = factory();
+})(this, function() {
+return (this["webpackJsonpwebpackNumbers"] = this["webpackJsonpwebpackNumbers"] || []).push([["main"],{
+
+/***/ "./index.js":
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ref_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ref.json */ "./ref.json");
+var _ref_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./ref.json */ "./ref.json", 1);
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+
+function createTranslator() {
+  return {
+    numtoword: function numtoword(num) {
+      return num < 0 || num > 5 ? 'This is a failure' : converttoword(num);
+    },
+    wordtonum: function wordtonum(word) {
+      var num = converttonum(word);
+      return num === -1 ? 'This is a failure' : num;
+    },
+    getTheAnswer: function getTheAnswer() {
+      return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+        var theAnswer;
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! the-answer */ "./node_modules/the-answer/dist/the-answer.es.js"));
+
+              case 2:
+                theAnswer = _context.sent;
+                console.log(theAnswer);
+
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    }
+  };
+}
+
+var converttoword = function converttoword(num) {
+  return lodash__WEBPACK_IMPORTED_MODULE_0___default.a.reduce(_ref_json__WEBPACK_IMPORTED_MODULE_1__, function (accum, ref) {
+    return ref.num === num ? ref.word : accum;
+  }, '');
+};
+
+var converttonum = function converttonum(word) {
+  return lodash__WEBPACK_IMPORTED_MODULE_0___default.a.reduce(_ref_json__WEBPACK_IMPORTED_MODULE_1__, function (accum, ref) {
+    return ref.word === word && word.toLowerCase() ? ref.num : accum;
+  }, -1);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (createTranslator());
+
+/***/ }),
 
 /***/ "./node_modules/lodash/lodash.js":
 /*!***************************************!*\
@@ -17084,7 +17164,19 @@ module.exports = function(module) {
 };
 
 
+/***/ }),
+
+/***/ "./ref.json":
+/*!******************!*\
+  !*** ./ref.json ***!
+  \******************/
+/*! exports provided: 0, 1, 2, 3, 4, 5, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("[{\"num\":1,\"word\":\"One\"},{\"num\":2,\"word\":\"Two\"},{\"num\":3,\"word\":\"Three\"},{\"num\":4,\"word\":\"Four\"},{\"num\":5,\"word\":\"Five\"},{\"num\":0,\"word\":\"Zero\"}]");
+
 /***/ })
 
-}]);
-//# sourceMappingURL=vendors~main.webpack-numbers.js.map
+},[["./index.js","runtime~main"]]]);
+});
+//# sourceMappingURL=main.webpack-numbers.js.map

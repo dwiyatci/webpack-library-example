@@ -5,20 +5,25 @@ module.exports = function (api) {
     [
       '@babel/preset-env',
       {
-        targets: {
-          browsers: [
-            'Chrome >= 57',
-            'Firefox >= 52',
-            'Edge >= 12',
-            'Explorer >= 11',
-            'Safari >= 10',
-          ],
-        },
-        // modules: 'commonjs',
+        targets: 'last 2 versions',
+        useBuiltIns: 'entry',
+        corejs: 3,
+        modules: false,
+        debug: false,
       },
     ],
   ];
   const plugins = [
+    [
+      '@babel/plugin-transform-runtime',
+      {
+        absoluteRuntime: false,
+        corejs: 3,
+        helpers: true,
+        regenerator: true,
+        useESModules: true,
+      },
+    ],
     // 'add-module-exports'
   ];
 
