@@ -4,7 +4,6 @@ module.exports = (env, argv) => {
   const config = {
     // mode: 'production',
     mode: 'development',
-    devtool: 'source-map',
     entry: './index.js',
     output: {
       // path: path.resolve(__dirname, './dist'),
@@ -12,7 +11,7 @@ module.exports = (env, argv) => {
       libraryTarget: 'umd',
       // libraryTarget: 'commonjs',
       // libraryTarget: 'commonjs2',
-      // globalObject: 'this',
+      globalObject: 'this',
       // libraryExport: 'default',
       library: 'webpackNumbers',
     },
@@ -24,8 +23,10 @@ module.exports = (env, argv) => {
     //     root: '_',
     //   },
     // },
+    devtool: 'source-map',
     optimization: {
-      splitChunks: { chunks: 'all' },
+      runtimeChunk: true,
+      // splitChunks: { chunks: 'all' },
     },
     module: {
       rules: [

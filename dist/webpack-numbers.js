@@ -1,14 +1,4 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else if(typeof exports === 'object')
-		exports["webpackNumbers"] = factory();
-	else
-		root["webpackNumbers"] = factory();
-})(window, function() {
-return /******/ (function(modules) { // webpackBootstrap
+/******/ (function(modules) { // webpackBootstrap
 /******/ 	// install a JSONP callback for chunk loading
 /******/ 	function webpackJsonpCallback(data) {
 /******/ 		var chunkIds = data[0];
@@ -67,7 +57,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// Promise = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		"main": 0
+/******/ 		"runtime~main": 0
 /******/ 	};
 /******/
 /******/ 	var deferredModules = [];
@@ -149,7 +139,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
-/******/ 	var jsonpArray = window["webpackJsonpwebpackNumbers"] = window["webpackJsonpwebpackNumbers"] || [];
+/******/ 	var jsonpArray = this["webpackJsonpwebpackNumbers"] = this["webpackJsonpwebpackNumbers"] || [];
 /******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
 /******/ 	jsonpArray.push = webpackJsonpCallback;
 /******/ 	jsonpArray = jsonpArray.slice();
@@ -157,76 +147,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	var parentJsonpFunction = oldJsonpFunction;
 /******/
 /******/
-/******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./index.js","vendors~main"]);
-/******/ 	// run deferred modules when ready
-/******/ 	return checkDeferredModules();
+/******/ 	// run deferred modules from other chunks
+/******/ 	checkDeferredModules();
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ "./index.js":
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _lodash = _interopRequireDefault(__webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js"));
-
-var _ref = _interopRequireDefault(__webpack_require__(/*! ./ref.json */ "./ref.json"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function createTransalator() {
-  return {
-    numtoword: function numtoword(num) {
-      return num < 0 || num > 5 ? 'This is a failure' : converttoword(num);
-    },
-    wordtonum: function wordtonum(word) {
-      var num = converttonum(word);
-      return num === -1 ? 'This is a failure' : num;
-    }
-  };
-}
-
-var converttoword = function converttoword(num) {
-  return _lodash.default.reduce(_ref.default, function (accum, ref) {
-    return ref.num === num ? ref.word : accum;
-  }, '');
-};
-
-var converttonum = function converttonum(word) {
-  return _lodash.default.reduce(_ref.default, function (accum, ref) {
-    return ref.word === word && word.toLowerCase() ? ref.num : accum;
-  }, -1);
-};
-
-var _default = createTransalator();
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./ref.json":
-/*!******************!*\
-  !*** ./ref.json ***!
-  \******************/
-/*! exports provided: 0, 1, 2, 3, 4, 5, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("[{\"num\":1,\"word\":\"One\"},{\"num\":2,\"word\":\"Two\"},{\"num\":3,\"word\":\"Three\"},{\"num\":4,\"word\":\"Four\"},{\"num\":5,\"word\":\"Five\"},{\"num\":0,\"word\":\"Zero\"}]");
-
-/***/ })
-
-/******/ });
-});
+/******/ ([]);
 //# sourceMappingURL=webpack-numbers.js.map

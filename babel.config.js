@@ -14,7 +14,7 @@ module.exports = function (api) {
             'Safari >= 10',
           ],
         },
-        modules: 'commonjs',
+        // modules: 'commonjs',
       },
     ],
   ];

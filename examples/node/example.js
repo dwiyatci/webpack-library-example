@@ -1,6 +1,7 @@
 // require('lodash');
-// var webpackNumbers = require('./webpack-numbers.js');
-const webpackNumbers = require('../../dist/webpack-numbers');
+var webpackNumbers = require('./webpack-numbers.js');
+// require('../../dist/vendors~main.webpack-numbers');
+// const webpackNumbers = require('../../dist/webpack-numbers');
 
 console.log(webpackNumbers);
 
